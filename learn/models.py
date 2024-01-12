@@ -37,3 +37,13 @@ class AuthorDetail(models.Model):
 
     def __str__(self):
         return self.author.name
+
+class Tag(models.Model):
+    '''课程的标签表，包括 name 属性，与 Course 为多对多关系
+    '''
+
+    name = models.CharField(max_length=32)
+    course = models.ManyToManyField('Course')
+
+    def __str__(self):
+        return self.name
