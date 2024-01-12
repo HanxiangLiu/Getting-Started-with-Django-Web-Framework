@@ -14,3 +14,13 @@ class Course(models.Model):
 
     def __repr__(self):
         return f'<Course: {self.name}>'
+
+class Author(models.Model):
+    '''课程作者映射类，包括作者名字、性别等属性
+    '''
+
+    name = models.CharField(max_length=64)
+    gender = models.BooleanField(null=True)
+
+    def __str__(self):
+        return self.name
