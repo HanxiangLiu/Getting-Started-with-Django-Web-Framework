@@ -27,3 +27,6 @@ def course(request, id):
     s = 'ID: {}</br>Name: {}</br>发布时间：{}</br>学生人数：{}'.format(
             course.id, course.name, course.pub_date, course.stu_number)
     return HttpResponse(s)
+
+def add_a_b(request, a, b):
+    return HttpResponse(a+b)
