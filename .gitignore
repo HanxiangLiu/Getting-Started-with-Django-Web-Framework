@@ -1,2 +1,4 @@
 .vscode/
+__pycache__/
 learn/__pycache__/
+myweb/__pycache__/
