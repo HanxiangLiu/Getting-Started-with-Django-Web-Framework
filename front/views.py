@@ -1,6 +1,9 @@
 from django.shortcuts import render
 
 
+def home(request):
+    return render(request, 'front/home.html')
+
 def page_not_found(request, exception):
     '''404 错误处理函数
     '''

@@ -23,7 +23,8 @@ urlpatterns = [
     #path('', index),
     #path('courses', courses),
     #path('course/<int:id>', course),
-    path('learn/', include('learn.urls'))
+    path('learn/', include('learn.urls')),
+    path('', views.home),
 ]
 handler404 = views.page_not_found
 handler500 = views.server_error

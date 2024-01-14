@@ -121,7 +121,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = "static/"
+# 项目创建时默认生成的配置项，这是浏览器直接打开静态文件用的前缀目录
+STATIC_URL = '/static/'
+
+# 静态文件放在对应的 app 下的 static 目录中或者 STATICFILES_DIRS 列表里的目录中
+# 当 DEBUG = True 时，Django 就能自动找到放在里面的静态文件
+# 如果不想用 STATICFILES_DIRS 可以不用，都放在 app 的 static 目录下也可以
+STATICFILES_DIRS = ['myweb/static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
