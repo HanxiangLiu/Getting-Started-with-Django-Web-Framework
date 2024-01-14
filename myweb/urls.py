@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 # from learn.views import index, courses, course
+from front import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,3 +25,5 @@ urlpatterns = [
     #path('course/<int:id>', course),
     path('learn/', include('learn.urls'))
 ]
+handler404 = views.page_not_found
+handler500 = views.server_error
