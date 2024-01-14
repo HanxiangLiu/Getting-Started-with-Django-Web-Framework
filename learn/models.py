@@ -20,8 +20,8 @@ class Author(models.Model):
     '''课程作者映射类，包括作者名字、性别等属性
     '''
 
-    name = models.CharField(max_length=64)
-    gender = models.BooleanField(null=True)
+    name = models.CharField(max_length=64, verbose_name='名字')
+    gender = models.BooleanField('性别', null=True)
 
     def __str__(self):
         return self.name
